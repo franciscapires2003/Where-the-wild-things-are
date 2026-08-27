@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon1.svg">
+
+    <title>Choose Your Mode</title>
+    <link rel="stylesheet" href="css/modo.css" />
+</head>
+
+<body class="modepage">
+    <header class="headerModepage">
+        <a href="index.html">
+            <img src="assets/homepage.svg" alt="Home" class="top-icon" />
+        </a>
+    </header>
+
+    <main class="titleContainer">
+        <h1 class="title">How do you want to explore the website?</h1>
+        <h2 class="subtitle">Select your interaction mode</h2>
+
+        <div class="modeContainer">
+            <button id="autoplay" class="modos" data-mode="auto">
+                <img src="assets/autoplay.svg" alt="Autoplay" class="modeIcon" />
+                <span class="modoTexto">AUTOPLAY</span>
+            </button>
+
+            <button id="manual" class="modos" data-mode="manual">
+                <img src="assets/manual.svg" alt="Manual Scroll" class="modeIcon iconPata" />
+                <span class="modoTexto">MANUAL SCROLL</span>
+            </button>
+        </div>
+    </main>
+
+    <script src="js/modo.js"></script>
+</body>
+
+</html>

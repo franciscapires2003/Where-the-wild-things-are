@@ -1,0 +1,727 @@
+@font-face {
+  font-family: 'Reglo';
+  src: url('../assets/fonts/Reglo-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body {
+  background-color: #FF70A7;
+  color: #333333;
+  margin: 0;
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#aboutIcon,
+#homepageIcon {
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+
+#aboutIcon {
+  width: 2.5rem;
+}
+
+#homepageIcon {
+  width: 3.5rem;
+}
+
+header a:hover img {
+  filter: brightness(0.85);
+  transform: scale(1.08);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  padding-bottom: 1rem;
+}
+
+footer p {
+  color: #1B1BEA;
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
+  font-family: Reglo, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  word-wrap: break-word;
+  text-shadow: 3px 3px 10px rgba(255, 76, 145, 1.00);
+  margin: 0;
+}
+
+#texto-esquerda {
+  width: 100%;
+  max-width: 29rem;
+  text-align: left;
+}
+
+#texto-direita {
+  width: 100%;
+  max-width: 20rem;
+  text-align: right;
+}
+
+.botaoHomepage {
+  display: flex;
+  justify-content: center;
+}
+
+.botao {
+  width: clamp(9rem, 20vw, 15rem);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botaoHomepage a:hover .botao {
+  filter: brightness(0.85);
+  transform: scale(1.03);
+}
+
+.titulo,
+h1 {
+  color: #FF0004;
+  font-size: clamp(2.8rem, 8.5vw, 7rem);
+  font-family: Reglo, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-shadow: 3px 3px 11px rgba(255, 76, 145, 1.00);
+}
+
+#linha1 {
+  display: inline-block;
+  transform: rotate(-7.62deg);
+}
+
+#linha2 {
+  display: block;
+  transform: rotate(-3.2deg);
+  transform-origin: left top;
+  margin: 0;
+}
+
+.formas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#forma1 {
+  width: 40vw;
+  position: fixed;
+  top: -32vh;
+  left: -8vw;
+}
+
+#forma2 {
+  width: 24vw;
+  position: fixed;
+  top: 16vh;
+  left: 8vw;
+}
+
+#forma3 {
+  width: 8vw;
+  position: fixed;
+  top: -8vh;
+  left: 24vw;
+}
+
+#forma4 {
+  width: 35vw;
+  position: fixed;
+  top: 18vh;
+  right: 16vw;
+}
+
+#forma5 {
+  width: 28vw;
+  position: fixed;
+  top: 8vh;
+  right: -8vw;
+}
+
+#forma6 {
+  width: 22vw;
+  position: fixed;
+  top: 52vh;
+  right: 4vw;
+}
+
+/* ------------------ PÁGINA ABOUT ------------------ */
+
+body.aboutpage {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+  overflow-y: auto;
+  /* Permite scroll no About */
+  overflow-x: hidden;
+  padding-bottom: 4rem;
+  padding-right: 2rem;
+}
+
+/* --- SCROLLBAR --- */
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1B1BEA;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #FF0004;
+  box-shadow: none;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1B1BEA transparent;
+}
+
+/* --- CONTEÚDO --- */
+
+body.aboutpage main.container {
+  margin-top: 2rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.container {
+  text-align: left;
+}
+
+.block {
+  margin-bottom: 1.5rem;
+}
+
+.block h2 {
+  color: #FF0004;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-family: Reglo, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-shadow: 3px 3px 11px rgba(255, 76, 145, 1.00);
+  margin-bottom: 0.5rem;
+}
+
+.block p {
+  color: #0900FF;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-family: Newsreader, serif;
+  font-weight: 450;
+  line-height: 1.5;
+  text-shadow: 2px 2px 8px rgba(255, 76, 145, 0.8);
+  max-width: 60rem;
+}
+
+.block h3 {
+  color: #0900FF;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-family: Newsreader, serif;
+  font-weight: 600;
+  line-height: 1.4;
+  text-shadow: 2px 2px 8px rgba(255, 76, 145, 0.8);
+  margin-top: 1rem;
+}
+
+/* --- FORMAS  --- */
+
+body.aboutpage .formas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#forma2-about {
+  width: 25vw;
+  position: absolute;
+  top: 30vh;
+  right: -6vw;
+  transform: rotate(-20deg);
+}
+
+#forma3-about {
+  width: 8vw;
+  position: absolute;
+  top: 50vh;
+  right: 10vw;
+}
+
+#forma7-about {
+  width: 15vw;
+  position: absolute;
+  top: 50vh;
+  right: -5vw;
+}
+
+#flor1 {
+  width: 8vw;
+  position: absolute;
+  top: 30vh;
+  right: 10vw;
+}
+
+#flor2 {
+  width: 5vw;
+  position: absolute;
+  top: 50vh;
+  right: 19vw;
+}
+
+#forma8-about {
+  width: 20vw;
+  position: absolute;
+  bottom: -10vh;
+  left: -5vw;
+}
+
+#forma9-about {
+  width: 20vw;
+  position: absolute;
+  bottom: -7vh;
+  right: 15vw;
+}
+
+#forma4-about {
+  width: 40vw;
+  position: absolute;
+  bottom: -10vh;
+  right: -10vw;
+  transform: rotate(-90deg);
+}
+
+#flor3 {
+  width: 8vw;
+  position: absolute;
+  bottom: 20vh;
+  right: 22vw;
+}
+
+#flor2-2 {
+  width: 4vw;
+  position: absolute;
+  bottom: 35vh;
+  right: 22vw;
+}
+
+/* ----------------- TELEMÓVEIS E TABLETS ----------------- */
+
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem 1rem 0 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    text-align: center;
+  }
+
+  #texto-esquerda,
+  #texto-direita {
+    text-align: center;
+    max-width: 100%;
+  }
+
+
+  body.aboutpage {
+    padding-right: 1rem;
+  }
+}
+
+/* -----------------  TABLETS ----------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+
+  main {
+    margin-top: 8vh;
+    gap: 1.5rem;
+  }
+
+  footer {
+    padding-bottom: 4rem;
+  }
+
+  footer p {
+    font-size: 1.6rem;
+  }
+}
+
+/*----------------- IPAD NA VERTICAL ----------------- */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+  main {
+    margin-top: 30vh;
+    gap: 4rem;
+    align-items: left;
+  }
+
+  .titulo,
+  h1 {
+    font-size: clamp(4rem, 9vw, 5.5rem);
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .botao {
+    width: 13rem;
+  }
+
+  footer {
+    padding-bottom: 2.5rem;
+  }
+
+  footer p {
+    font-size: 1.8rem;
+    line-height: 1.9rem;
+  }
+
+  #forma1 {
+    width: 45vmin;
+    top: -10vmin;
+    left: -10vmin;
+  }
+
+  #forma2 {
+    width: 35vmin;
+    top: 25vmin;
+    left: -2vmin;
+  }
+
+  #forma3 {
+    width: 14vmin;
+    top: -2vmin;
+    left: 30vmin;
+  }
+
+  #forma4 {
+    width: 40vmin;
+    top: 15vmin;
+    right: 20vmin;
+  }
+
+  #forma5 {
+    width: 35vmin;
+    top: 12vmin;
+    right: -8vmin;
+  }
+
+  #forma6 {
+    width: 28vmin;
+    top: 40vmin;
+    right: 2vmin;
+  }
+
+  body.aboutpage main.container {
+    margin-top: 3rem;
+    gap: 2.5rem;
+  }
+
+  .block h2 {
+    font-size: 3rem;
+  }
+
+  .block p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  #forma2-about {
+    width: 40vmin;
+    top: 30vh;
+    right: -10vmin;
+  }
+
+  #forma3-about {
+    width: 14vmin;
+    top: 40vh;
+    right: 16vmin;
+  }
+
+  #forma7-about {
+    width: 25vmin;
+    top: 40vh;
+    right: -8vmin;
+  }
+
+  #flor1 {
+    width: 16vmin;
+    top: 28vh;
+    right: 16vmin;
+  }
+
+  #flor2 {
+    width: 10vmin;
+    top: 40vh;
+    right: 30vmin;
+  }
+
+  #forma8-about {
+    width: 40vmin;
+    bottom: -8vh;
+    left: -12vmin;
+  }
+
+  #forma9-about {
+    width: 40vmin;
+    bottom: -6vh;
+    right: 16vmin;
+  }
+
+  #forma4-about {
+    width: 60vmin;
+    bottom: -4vh;
+    right: -16vmin;
+  }
+
+  #flor3 {
+    width: 12vmin;
+    bottom: 16vh;
+    right: 32vmin;
+  }
+
+  #flor2-2 {
+    width: 8vmin;
+    bottom: 24vh;
+    right: 32vmin;
+  }
+}
+
+/*----------------- TELEMOVEIS NA VERTICAL ----------------- */
+@media (max-width: 768px) and (orientation: portrait) {
+
+  #forma1 {
+    width: 60vmin;
+    top: -8vmin;
+    left: -16vmin;
+  }
+
+  #forma2 {
+    width: 48vmin;
+    top: 40vmin;
+    left: -8vmin;
+  }
+
+  #forma3 {
+    width: 20vmin;
+    top: -4vmin;
+    left: 32vmin;
+  }
+
+  #forma4 {
+    width: 48vmin;
+    top: 36vmin;
+    right: 16vmin;
+  }
+
+  #forma5 {
+    width: 46vmin;
+    top: 24vmin;
+    right: -16vmin;
+  }
+
+  #forma6 {
+    width: 32vmin;
+    top: 64vmin;
+    right: 0vmin;
+  }
+
+  .titulo,
+  h1 {
+    line-height: 1.2;
+  }
+
+  #linha1 {
+    display: inline-block;
+    transform: rotate(-7.62deg);
+  }
+
+  #linha2 {
+    display: block;
+    transform: rotate(-3.2deg);
+    transform-origin: left top;
+    margin: 0;
+  }
+
+  main {
+    margin-top: 24vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .titulo,
+  h1 {
+    line-height: 1.2;
+  }
+
+  #linha1 {
+    display: inline-block;
+    transform: rotate(-7.62deg);
+  }
+
+  #linha2 {
+    display: block;
+    transform: rotate(-3.2deg);
+    transform-origin: left top;
+    margin: 0;
+  }
+
+  .botaoHomepage {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .botao {
+    width: 12rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding-bottom: 1.4rem;
+  }
+
+
+  #texto-esquerda {
+    width: 100%;
+    text-align: left;
+  }
+
+  #texto-direita {
+    width: 100%;
+    text-align: right;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  #forma2-about {
+    width: 40vmin;
+    top: 40vh;
+    right: -10vmin;
+  }
+
+  #forma3-about {
+    width: 16vmin;
+    top: 48vh;
+    right: 10vmin;
+  }
+
+  #forma7-about {
+    width: 25vmin;
+    top: 48vh;
+    right: -8vmin;
+  }
+
+  #flor1 {
+    width: 16vmin;
+    top: 40vh;
+    right: 16vmin;
+  }
+
+  #flor2 {
+    width: 12vmin;
+    top: 52vh;
+    right: 26vmin;
+  }
+
+  #forma8-about {
+    width: 40vmin;
+    bottom: -8vh;
+    left: -12vmin;
+  }
+
+  #forma9-about {
+    width: 40vmin;
+    bottom: -6vh;
+    right: 16vmin;
+  }
+
+  #forma4-about {
+    width: 60vmin;
+    bottom: -4vh;
+    right: -16vmin;
+  }
+
+  #flor3 {
+    width: 16vmin;
+    bottom: 12vh;
+    right: 32vmin;
+  }
+
+  #flor2-2 {
+    width: 12vmin;
+    bottom: 24vh;
+    right: 20vmin;
+  }
+}

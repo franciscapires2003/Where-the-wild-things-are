@@ -1,0 +1,28 @@
+<svg width="84" height="149" viewBox="0 0 84 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_1543_68)">
+<path d="M31.3507 38.8189L8.72938 8.165C8.49324 7.8462 7.99317 8.02138 8.00011 8.41725L9.91705 95.597C9.92747 96.0244 10.0629 96.4378 10.306 96.7847L37.6363 135.591C37.8725 135.927 38.3968 135.738 38.3691 135.325L31.5799 39.46C31.5625 39.2288 31.4826 39.0046 31.3437 38.8154L31.3507 38.8189Z" fill="#1B1BEA"/>
+</g>
+<g filter="url(#filter1_g_1543_68)">
+<path d="M51.673 110.181L74.2943 140.835C74.5304 141.154 75.0305 140.979 75.0236 140.583L73.1066 53.403C73.0962 52.9756 72.9608 52.5622 72.7177 52.2153L45.3874 13.4092C45.1512 13.0729 44.6268 13.2621 44.6546 13.6755L51.4438 109.54C51.4612 109.771 51.541 109.995 51.6799 110.185L51.673 110.181Z" fill="#1B1BEA"/>
+</g>
+<defs>
+<filter id="filter0_g_1543_68" x="0" y="0" width="46.3701" height="143.764" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.99900001287460327 0.99900001287460327" numOctaves="3" seed="3053" />
+<feDisplacementMap in="shape" scale="16" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_1543_68">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+<filter id="filter1_g_1543_68" x="36.6536" y="5.23623" width="46.3701" height="143.764" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.99900001287460327 0.99900001287460327" numOctaves="3" seed="3053" />
+<feDisplacementMap in="shape" scale="16" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_1543_68">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+</defs>
+</svg>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="assets/favicon1.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+    rel="stylesheet">
+
+  <title>Where the Wild Things Are</title>
+  <link rel="stylesheet" href="css/experiencia.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="homepageButton" title="Ir para a página inicial">
+      <img id="homepageIcon" src="assets/homepage.svg" alt="Início">
+    </a>
+    <a href="#" id="infoButton" class="infoButton" title="Instruções">
+      <img id="infoIcon" src="assets/about.svg" alt="Info">
+    </a>
+  </header>
+
+  <div id="rotate-screen">
+    <div class="rotate-content">
+      <div class="phone-icon"><img id="rotate-icon" src="assets/rotate.svg" alt="rotate"></div>
+      <h2>Please rotate your device.</h2>
+      <p>For a better experience, place your phone horizontally.</p>
+    </div>
+  </div>
+
+  <!-- Pop-up com classe "hidden" para não piscar no arranque do Autoplay -->
+  <div id="popup-instrucoes" class="popup hidden">
+    <div class="popup-card">
+
+      <img src="assets/fundopopup.svg" class="card-bg" alt=""> <!--Fundo do popup-->
+
+      <button id="btn-fechar-popup" class="btn-fechar" title="Fechar">
+        <img src="assets/X.svg" alt="Fechar">
+      </button>
+
+      <div class="popup-content">
+        <h2>How to Use</h2>
+        <p>Scroll to follow Max’s emotional journey and discover how he finds his inner peace.</p>
+
+        <button id="btn-comecar" class="btn-continue" title="Continuar">
+          <img src="assets/continuar.svg" alt="Continuar">
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="scroll-track">
+    <main class="sticky-screen">
+      <video id="story-video" class="responsive-video" muted playsinline webkit-playsinline preload="auto">
+        <source src="assets/tudoFinal.mp4" type="video/mp4">
+      </video>
+    </main>
+  </div>
+
+  <div id="controlos" class="controlos hidden">
+    <button id="pause" class="botoes" title="Play / Pause">
+      <img id="iconpause" src="assets/pause.svg" alt="Pausa" />
+    </button>
+    <button id="restart" class="botoes hidden" title="Reiniciar">
+      <img src="assets/replay.svg" alt="Reiniciar" />
+    </button>
+  </div>
+
+  <div class="progressbarContainer">
+    <div class="progressbarTrack">
+      <img src="assets/barraBaixo.svg" alt="Barra de Baixo" class="track-img" />
+
+      <div class="progressbarFiller" id="progress-fill">
+        <img src="assets/barraCima.svg" alt="Preenchimento" class="fillBar" />
+      </div>
+      <img src="assets/Ponteiro.svg" alt="Ponteiro" class="progress-pointer" id="progress-pointer" draggable="false" />
+    </div>
+  </div>
+
+  <script src="js/experiencia.js"></script>
+</body>
+
+</html>

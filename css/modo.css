@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'Reglo';
+    src: url('../assets/fonts/Reglo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    -webkit-appearance: none;
+    appearance: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+body.modepage {
+    background-color: #FF70A7;
+    color: #333333;
+    margin: 0;
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.headerModepage {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.top-icon {
+    width: 3.5rem;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    display: block;
+}
+
+.headerModepage a:hover .top-icon {
+    transform: scale(1.08);
+    filter: brightness(0.85);
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    margin-top: 8vh;
+    margin-bottom: auto;
+    gap: 1rem;
+}
+
+.title {
+    color: #0900FF;
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+    font-family: Reglo, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-shadow: 3px 3px 10px rgba(255, 76, 145, 1.00);
+    max-width: 58rem;
+}
+
+.subtitle {
+    color: #0900FF;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-family: Reglo, sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    text-shadow: 2px 2px 8px rgba(255, 76, 145, 0.9);
+    margin-bottom: 2rem;
+}
+
+/* =========================================================
+   BOTÕES DE INTERAÇÃO (MODOS)
+   ========================================================= */
+.modeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(3rem, 8vw, 7rem);
+}
+
+.modos {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.5rem;
+    outline: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.modos:hover {
+    transform: scale(1.08);
+    filter: brightness(0.9);
+}
+
+.modeIcon {
+    width: clamp(5rem, 9vw, 7.5rem);
+    height: clamp(5rem, 9vw, 7.5rem);
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.iconPata {
+    width: clamp(5.5rem, 9.5vw, 8.5rem);
+    height: clamp(5.5rem, 9.5vw, 8.5rem);
+}
+
+.modoTexto {
+    color: #0900FF;
+    font-family: Reglo, sans-serif;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(255, 76, 145, 1.00);
+    letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Mesma lógica do style.css e experiencia.css)
+   ========================================================================== */
+
+/* 1. TELEMÓVEIS E ECRÃS PEQUENOS (Vertical / Portrait) */
+@media (max-width: 768px) {
+    body.modepage {
+        padding: 1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .top-icon {
+        width: 2.5rem;
+    }
+
+    .titleContainer {
+        margin-top: 6vh;
+        gap: 0.8rem;
+    }
+
+    .subtitle {
+        margin-bottom: 1.5rem;
+    }
+
+    .modeContainer {
+        gap: 2rem;
+    }
+}
+
+/* 2. TABLETS / IPADS NA VERTICAL */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .title {
+        font-size: clamp(2.8rem, 6vw, 4rem);
+        line-height: 1.2;
+    }
+
+    .titleContainer {
+        margin-top: 10vh;
+    }
+
+    .subtitle {
+        font-size: 1.6rem;
+    }
+
+    .modeIcon {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+}
+
+/* 3. TELEMÓVEIS NA HORIZONTAL (Landscape) */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    body.modepage {
+        padding: 0.8rem 1.5rem 0.5rem 1.5rem;
+    }
+
+    .top-icon {
+        width: 2rem;
+    }
+
+    .titleContainer {
+        margin-top: 2vh;
+        gap: 0.5rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        line-height: 1.1;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .modeContainer {
+        gap: 3rem;
+    }
+
+    .modeIcon,
+    .iconPata {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .modos {
+        gap: 0.4rem;
+    }
+
+    .modoTexto {
+        font-size: 1.1rem;
+    }
+}
